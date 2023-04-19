@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
 package apresentacao;
+import javax.swing.JOptionPane;
 import modelo.Controle;
 
 
@@ -139,8 +140,16 @@ public class frmPrincipal extends javax.swing.JDialog
 
     private void calcular(String operacao)
     {
-        Controle controle = new Controle(txfPrimeiroNumero.getText(), txfSegundoNumero.getText(), operacao);
-        lblResultado.setText(controle.getResultado());
+        Controle controle = new Controle(txfPrimeiroNumero.getText(), 
+                txfSegundoNumero.getText(), operacao);
+        if (controle.mensagem.equals(""))
+            lblResultado.setText(controle.getResultado());
+        else
+        {
+            JOptionPane.showMessageDialog(rootPane, 
+                    controle.mensagem);
+            lblResultado.setText("");
+        }
     }
     
     private void btnSomarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSomarActionPerformed

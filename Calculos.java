@@ -1,12 +1,7 @@
 package modelo;
 
-public class Calculos 
+public class Calculos extends Propriedades
 {
-    private Double num1;
-    private Double num2;
-    private String operacao;
-    private Double resultado;
-
     public Calculos(Double num1, Double num2, String operacao)
     {
         this.num1 = num1;
@@ -14,8 +9,6 @@ public class Calculos
         this.operacao = operacao;
         this.executar();
     }
-    
-    
     
     private void executar()
     {

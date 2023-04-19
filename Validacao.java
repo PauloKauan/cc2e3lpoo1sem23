@@ -1,13 +1,7 @@
 package modelo;
 
-public class Validacao 
+public class Validacao extends Propriedades
 {
-    private String numero1;
-    private String numero2;
-    private String operacao;
-    private Double num1;
-    private Double num2;
-    private String mensagem;
 
     public Validacao(String numero1, String numero2, String operacao)
     {
